@@ -10,7 +10,7 @@ const createEntry = (title, content, date, id) => {
         <p>
             <time>${date}</time>
         </p>
-        <button class="delete" id=${id}>Delete this Post</button>
+        <button class="delete" id=${id}><span>Delete Post</span></button>
     </article>
     `
 }

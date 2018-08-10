@@ -8,7 +8,7 @@ const $ = require("jquery")
 $("#journalForm").html(FormManager.renderEntryForm())
 
 // Add an event listener for the save button
-$("#saveEntryButton").addEventListener("click", () => {
+$("#saveEntryButton").click(() => {
     // Get form field values
     // Create object from them
     // Add timestamp
@@ -22,7 +22,7 @@ $("#saveEntryButton").addEventListener("click", () => {
     APIObject.saveJournalEntry(newEntry).then(() => {
         // Clear the form fields
         FormManager.clearForm()
-        $("#entryList").innerHTML = ""
+        $("#entryList").html("")
         listEntries()
     })
 
@@ -31,9 +31,9 @@ $("#saveEntryButton").addEventListener("click", () => {
 
 listEntries()
 
-document.body.addEventListener("click", () => {
+$("body").click( () => {
     if (event.target.className === "delete") {
         event.target.parentElement.remove();
         APIObject.deleteJournalEntry(event.target.id)
     }
-})    
+})   

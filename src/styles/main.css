@@ -1,4 +1,53 @@
 .journalEntry {
     border: solid;
-    background-color: rgba(96, 183, 255, 0.822)
+    background-color: #403828;
+    color: white;
+    padding: 2em;
 }
+
+body {
+    margin: 0 auto;
+    max-width: 80%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    background-color: bisque;
+}
+
+.delete {
+    border-radius: 2px;
+    background-color: #db5600;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.delete span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+.delete span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.delete:hover span {
+    padding-right: 25px;
+  }
+  
+.delete:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
