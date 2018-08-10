@@ -17,6 +17,7 @@ $("#saveEntryButton").click(() => {
         content: $("#entryContent").val(),
         date: Date(Date.now())
     }
+    
 
     // POST to API
     APIObject.saveJournalEntry(newEntry).then(() => {
